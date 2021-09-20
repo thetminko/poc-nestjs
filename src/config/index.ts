@@ -1,8 +1,11 @@
+import local from './local.json';
+import dev from './dev.json';
+
 export const config = () => {
   switch (process.env.NODE_ENV) {
     case 'dev':
-      return require('./dev.json');
+      return dev;
     default:
-      return require('./local.json');
+      return local;
   }
 };
