@@ -1,11 +1,9 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { AuthGuard } from './auth.guard';
+import { ApiModule } from './api/api.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(ApiModule);
   app.setGlobalPrefix('api');
-  app.useGlobalGuards(new AuthGuard());
   await app.listen(3000);
 }
 

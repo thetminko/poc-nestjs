@@ -1,0 +1,8 @@
+{
+  "db": {
+    "host": "dev",
+    "username": "root",
+    "password": "test",
+    "schema": "nestjs"
+  }
+}
